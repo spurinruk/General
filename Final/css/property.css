@@ -1,0 +1,253 @@
+@font-face {
+  font-family: OpenSans-Light;
+  src: url(../fonts/Open_Sans/static/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: Mulish-Light;
+  src: url(../fonts/Mulish/static/Mulish-Light.ttf);
+}
+/* Global Styles */
+body {
+  text-align: center;
+  margin: 10px; /* Use margin shorthand to apply the same margin to all sides */
+  padding: 10px; /* Use padding shorthand to apply the same padding to all sides */
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: OpenSans-Light;
+  color: rgb(77, 76, 76);
+}
+
+.logo-img img {
+  max-width: 20%; /* Set the maximum width of the image to prevent overflow on smaller screens */
+  height: auto;
+  display: block; /* To remove extra spacing under the image */
+  margin: 0 auto; /*center img*/
+}
+
+#menu-button button {
+  font-family: Mulish-Light;
+  color: rgb(240, 240, 245);
+  background-color: rgb(23, 57, 88);
+  padding: 7px 10px;
+  margin: 5px; /* Use margin shorthand */
+  border: rgb(9, 28, 83);
+  border-radius: 8px;
+}
+
+#menu-button button:hover:enabled {
+  cursor: pointer;
+  background-color: #a2a0a0;
+  color: rgb(248, 250, 252);
+}
+
+.pic-footer p {
+  font-family: OpenSans-Light;
+  font-size: small;
+  color: rgb(77, 76, 76);
+  font-weight: bold;
+}
+
+/* Feedback Styles */
+#cust-feedback div {
+  border: solid #a2a0a0 1px;
+  padding: 10px;
+  max-width: 250px;
+  margin: 0 auto;
+  /* margin-top: 20px; */
+  border-radius: 10px;
+  box-shadow: 8px 0 0 burlywood;
+}
+
+#cust-feedback {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* gap: 20px; */
+  padding-bottom: 20px;
+}
+
+#cust-feedback p {
+  font-family: Mulish-Light;
+  font-size: smaller;
+  font-style: italic;
+  color: rgb(23, 57, 88);
+  transition: transform 0.2s ease;
+}
+
+#cust-feedback p:hover {
+  transform: translateY(-5px); /* Move the text 5 pixels to the top on hover */
+}
+
+/* Property Styles */
+#image-grid img {
+  max-width: 100%; /* Set the maximum width of the image to fit the container */
+  height: 300px; /* Set a fixed height for all images */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.head-img img {
+  max-width: 100px; /* Set the maximum width of the image to adjust according to the screen */
+  height: auto;
+  display: block;
+  margin: 0 auto; /*center img*/
+}
+
+/* Listing Cards Styles */
+#all-listing {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%; /* Adjust the width to fill the available space */
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#all-listing .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  height: auto; /* Let the height adjust to the content */
+  border: solid 2px rgb(19, 74, 126);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-basis: 100%; /* Set the card width to 100% to take the full width on small screens */
+}
+
+.card img {
+  max-width: 95%; /* Set the maximum width of the image to fit the container */
+  height: 300px; /* Set a fixed height for all images */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+
+  padding: 5px;
+  border-radius: 15px;
+  margin: 0 auto; /*center img*/
+}
+
+/* Additional Styles */
+.topic-head h2:hover,
+.topic-head h2:focus {
+  transition: transform 0.2s ease;
+  transform: translateY(-5px);
+}
+
+#price,
+#address,
+#lot-size,
+#rooms,
+#desc {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+/*video*/
+#previous-cases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-container {
+  width: 100%; /* Make the videos take the full width */
+}
+
+.video-container video,
+.video-container iframe {
+  width: 100%; /* Make the videos take the full width */
+}
+
+/* Media Query for Screens Smaller than 400px */
+@media screen and (max-width: 400px) {
+  body {
+    margin-left: 10px; /* Reduce the left margin for smaller screens */
+    margin-right: 10px; /* Reduce the right margin for smaller screens */
+    padding: 20px; /* Increase padding for better spacing on small screens */
+  }
+
+  .card {
+    flex-basis: 100%; /* Make the cards take the full width on small screens */
+  }
+
+  #previous-cases video {
+    width: 100%; /* Adjust video width to fill the screen on small devices */
+    height: auto; /* Allow the video height to adjust accordingly */
+  }
+
+  #mission {
+    width: 100%; /* Adjust the width to fill the available space on small screens */
+    max-width: 400px; /* Limit the maximum width for smaller screens */
+    margin: 10px auto; /* Add some margin for better spacing */
+  }
+
+  #price,
+  #address,
+  #lot-size,
+  #rooms,
+  #desc {
+    max-width: 100%; /* Allow the content to take full width on small screens */
+  }
+  #references {
+    font-size: 14px; /* Decrease font size for better readability on small screens */
+    padding: 10px; /* Adjust padding for better spacing on small screens */
+  }
+}
+
+/*  Media Query for Screens Larger than 400px */
+@media screen and (min-width: 768px) {
+  body {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  #all-listing {
+    width: 750px;
+  }
+
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+
+  #previous-cases video {
+    width: 560px;
+    height: 315px;
+  }
+
+  #mission {
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  #price,
+  #address,
+  #lot-size,
+  #rooms,
+  #desc {
+    max-width: 590px;
+  }
+
+  .video-container {
+    width: 560px; /* Set the original width for larger screens */
+  }
+  #references {
+    font-size: 16px; /* Increase font size for larger screens */
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .video-container {
+    width: 920px; /* Set the original width for larger screens */
+  }
+  #references {
+    font-size: 20px; /* Further increase font size for large desktop screens */
+  }
+}

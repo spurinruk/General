@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/property.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="head-img">
+        <img src="media/logov3.jpg" alt="property logo" />
+      </div>
+      <div class="info">
+        <h1>Lucas Gomez</h1>
+      </div>
+      <br />
+      <div id="menu-button">
+        <!--dynamic button-->
+      </div>
+      <br />   
+
+    
+    <h2>Member Registration</h2>
+    <h3>Please complete all the fields below: </h3>
+    
+    <form id="form">
+        <!-- Existing fields... -->
+        
+        <div class="element">
+            <label for="firstname"><span style="color: red;">*</span>First Name: </label>
+            <input id="firstname" name="firstname" value="" type="text">
+        </div>
+        
+        <div class="element">
+            <label for="lastname"><span style="color: red;">*</span>Last Name: </label>
+            <input id="lastname" name="lastname" value="" type="text">
+        </div>
+
+        <div class="element">
+            <label for="phone"><span style="color: red;">*</span>Phone: </label>
+            <input id="phone" name="phone" value="" type="tel">
+        </div>
+
+        <div class="element">
+            <label for="email"><span style="color: red;">*</span>Email: </label>
+            <input id="email" name="email" value="" type="email">
+        </div>
+
+        <div class="element">
+            <label for="property-type"><span style="color: red;">*</span>Property Type: </label>
+            <select id="property-type" name="property-type">
+                <option value="house">House</option>
+                <option value="condominium">Condominium</option>
+            </select>
+        </div>
+
+        <div class="element">
+            <label for="bedrooms"><span style="color: red;">*</span>Number of Bedrooms: </label>
+            <input id="bedrooms" name="bedrooms" value="" type="number" min="1">
+        </div>
+
+        <div class="element">
+            <label for="bathrooms"><span style="color: red;">*</span>Number of Bathrooms: </label>
+            <input id="bathrooms" name="bathrooms" value="" type="number" min="1">
+        </div>
+
+        <div class="element">
+            <label for="price-range"><span style="color: red;">*</span>Price Range: </label>
+            <select id="price-range" name="price-range">
+                <option value="start">200000 - 300000</option>
+                <option value="medium-lo">300001 - 500000</option>
+                <option value="medium">500001 - 700000</option>
+                <option value="medium-hi">700001 - 1000000</option>
+                <option value="high">1000001 - 1200000</option>
+            </select>
+        </div>
+
+        <div class="element">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+       
+    </form>
+
+<div class = "btn">
+    <button id="register" >Register Now</button>
+    <button id="clear" >Clear Form</button>    
+</div>
+
+</form>
+<script src="js/data.js"></script>
+<script src="js/button.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>
